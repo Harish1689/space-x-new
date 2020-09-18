@@ -1,0 +1,425 @@
+/**
+ ** Styling of website.
+ ** All the SCSS files would be import here.
+ */
+/**
+ * Code for grid and breakpoints
+ **/
+/* place all variables here:  */
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;600;700;800&display=swap");
+/* place all font faces in this file */
+html,
+body,
+div,
+span,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+abbr,
+address,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+samp,
+small,
+strong,
+sub,
+sup,
+var,
+b,
+i,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+caption,
+article,
+aside,
+canvas,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  background: transparent;
+  border: 0;
+  font-size: 100%;
+  margin: 0;
+  outline: 0;
+  padding: 0;
+  vertical-align: baseline; }
+
+body {
+  height: 100%;
+  line-height: 1; }
+
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  box-sizing: border-box; }
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block; }
+
+nav ul {
+  list-style: none; }
+
+blockquote,
+q {
+  quotes: none; }
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none; }
+
+a {
+  background: transparent;
+  font-size: 100%;
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  vertical-align: baseline; }
+  a:hover, a:focus, a:active {
+    text-decoration: underline;
+    outline: 0; }
+
+/* change colours to suit your needs */
+ins {
+  background-color: #ff9;
+  color: #000;
+  text-decoration: none; }
+
+/* change colours to suit your needs */
+mark {
+  background-color: #ff9;
+  color: #000;
+  font-style: italic;
+  font-weight: bold; }
+
+del {
+  text-decoration: line-through; }
+
+abbr[title],
+dfn[title] {
+  border-bottom: 1px dotted;
+  cursor: help; }
+
+table {
+  border-collapse: inherit;
+  border-spacing: 0; }
+
+/* change border colour to suit your needs */
+hr {
+  border: 0;
+  border-top: 1px solid;
+  display: block;
+  height: 1px;
+  margin: 1em 0;
+  padding: 0; }
+
+input,
+select {
+  vertical-align: middle;
+  border-radius: 0;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0; }
+
+img {
+  height: auto;
+  max-width: 100%; }
+
+html,
+body {
+  min-height: 100%;
+  font-family: "Raleway", sans-serif;
+  font-size: 20px;
+  font-size: 1.25rem;
+  color: #464749;
+  background: #ffffff; }
+
+html,
+body {
+  overflow-x: hidden; }
+
+.container, .space-program-wrapper {
+  max-width: 1400px;
+  display: block;
+  padding: 0 5px;
+  margin: 0 auto;
+  /* Tablet horizental design */ }
+  @media (min-width: 990px) {
+    .container, .space-program-wrapper {
+      padding: 0 0px; } }
+
+.cl {
+  clear: both; }
+
+*[lang="ar"] {
+  direction: rtl;
+  display: inline-block; }
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: normal;
+  font-family: "Raleway", sans-serif; }
+
+a {
+  color: black;
+  text-decoration: none;
+  transition: all 0.2s ease; }
+  a:hover, a:active {
+    text-decoration: none;
+    color: #0a1118;
+    transition: all 0.2s ease; }
+
+/* Heading Set */
+h1 {
+  font-size: 26px;
+  font-size: 1.625rem;
+  color: #0a1118;
+  line-height: 32px;
+  font-weight: 700;
+  /* Tablet design */
+  /* Tablet horizental design */ }
+  @media (min-width: 701px) {
+    h1 {
+      font-size: 32px;
+      font-size: 2rem;
+      color: #0a1118;
+      line-height: 40px; } }
+  @media (min-width: 990px) {
+    h1 {
+      font-size: 60px;
+      font-size: 3.75rem;
+      line-height: 72px; } }
+
+p {
+  font-size: 13px;
+  font-size: 0.8125rem;
+  line-height: 26px;
+  color: #464749;
+  font-weight: 400;
+  margin: 20px 0 10px;
+  /* Tablet horizental design */ }
+  @media (min-width: 990px) {
+    p {
+      font-size: 16px;
+      font-size: 1rem; } }
+  p:last-child {
+    margin-bottom: 0; }
+  p:first-child {
+    margin-top: 0; }
+  p ~ p {
+    margin: 20px 0; }
+
+b,
+strong {
+  font-weight: normal; }
+
+/* Order and Unorder list */
+ul,
+ol {
+  list-style-position: outside;
+  margin: 0;
+  font-size: 20px;
+  font-size: 1.25rem;
+  font-family: "Raleway", sans-serif;
+  line-height: 28px; }
+  ul ul,
+  ul ol,
+  ol ul,
+  ol ol {
+    margin: 20px 0 20px 20px; }
+  ul li:not(:last-child),
+  ol li:not(:last-child) {
+    padding-bottom: 10px; }
+  ul ul,
+  ul ol,
+  ol ul,
+  ol ol {
+    margin: 20px 0;
+    font-size: 20px;
+    font-size: 1.25rem;
+    font-family: "Raleway", sans-serif;
+    line-height: 28px; }
+    ul ul ul,
+    ul ul ol,
+    ul ol ul,
+    ul ol ol,
+    ol ul ul,
+    ol ul ol,
+    ol ol ul,
+    ol ol ol {
+      margin: 20px 0 20px 20px; }
+
+.space-program-wrapper {
+  position: relative;
+  padding: 10px;
+  background-color: #cecece;
+  border:1px solid #cecece;
+  border-radius:5px;
+ }
+  .space-program-wrapper h1 {
+    font-size: 36px;
+    margin: 0 0 20px 0; }
+
+    @media (min-width: 701px) {
+     }
+    .space-program-wrapper .space-inner .left-panel {
+      width: 100%;
+      background-color: #ffffff;
+      border-radius: 7px;
+      padding: 10px;
+      height: fit-content;
+      margin-bottom: 10px;
+      float: left;
+      /* Tablet design */
+      /* Desktop design */ }
+      @media (min-width: 701px) {
+        .space-program-wrapper .space-inner .left-panel {
+          width: 36%;
+          margin-bottom: 0;
+          margin-right: 20px; } }
+      @media (min-width: 1025px) {
+        .space-program-wrapper .space-inner .left-panel {
+          width: 20%; } }
+      .space-program-wrapper .space-inner .left-panel h2 {
+        font-size: 22px;
+        font-weight: 600;
+        margin: 0 0 20px 0;
+        line-height: normal; }
+      .space-program-wrapper .space-inner .left-panel .heading-title {
+        border-bottom: 1px solid gray;
+        text-align: center;
+        font-size: 16px;
+        font-weight: 600;
+        margin-bottom: 7px;
+        padding-bottom: 10px;
+        margin-top: 10px; }
+      .space-program-wrapper .space-inner .left-panel ul {
+        list-style: none;
+        flex-wrap: wrap;
+        display: flex;
+        padding: 0;
+        margin: 0;
+        justify-content: space-between; }
+        .space-program-wrapper .space-inner .left-panel ul li {
+          background-color: #c4df9b;
+          color: black;
+          text-align: center;
+          list-style: none;
+          border-radius: 7px;
+          padding: 4px 7px;
+          display: block;
+          max-width: 110px;
+          margin-bottom: 15px;
+          font-size: 16px;
+          font-weight: 600;
+          flex: 1 0 50%;
+          /* Tablet design */ }
+          @media (min-width: 701px) {
+            .space-program-wrapper .space-inner .left-panel ul li {
+              width: 20%;
+              max-width: 90px; } }
+          .space-program-wrapper .space-inner .left-panel ul li a {
+            color: black;
+            cursor: pointer; }
+          .space-program-wrapper .space-inner .left-panel ul li:hover {
+            background-color: #7cba01; }
+    .space-program-wrapper .space-inner .right-panel {
+      width: 100%;
+      margin-left: 0px;
+      display: block;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      /* Tablet design */ }
+      @media (min-width: 701px) {
+        .space-program-wrapper .space-inner .right-panel {
+          display: flex;
+          width: 60%;
+          margin-left: 20px; } }
+            @media (min-width: 1025px) {
+          .space-program-wrapper .space-inner .right-panel  {
+           width: 78%;} }
+      .space-program-wrapper .space-inner .right-panel .program-wrapper {
+        width: 100%;
+        background-color: #ffffff;
+        border-radius: 7px;
+        padding: 15px;
+        margin-bottom: 15px;
+        /* Tablet design */
+        /* Desktop design */ }
+        @media (min-width: 701px) {
+          .space-program-wrapper .space-inner .right-panel .program-wrapper {
+            width: calc(100% / 2 - 20px); } }
+        @media (min-width: 1025px) {
+          .space-program-wrapper .space-inner .right-panel .program-wrapper {
+            width: calc(100% / 4 - 20px); } }
+
+        .space-program-wrapper .space-inner .right-panel .program-wrapper ul li {
+          font-size: 14px;
+          list-style: none;
+          margin-bottom: 0;
+          padding-bottom: 0; }
+         .boldFont{
+          font-weight: bold;
+         }
+  .space-program-wrapper .develped {
+    font-size: 18px;
+    font-weight: 600;
+    margin: 20px 0;
+    text-align: center;
+    line-height: normal;
+  }
+  .pointer{
+    cursor: pointer!important;
+  }
+
+/*# sourceMappingURL=application.css.map */
